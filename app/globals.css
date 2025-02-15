@@ -1,17 +1,25 @@
+@import url("https://site-assets.fontawesome.com/releases/v6.6.0/css/all.css");
+@import url("https://use.typekit.net/ioh8tqw.css");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-body {
+html, body {
   background-color: #ffffff;
   color: #333;
+  font-family: var(--font-inter);
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+  scrollbar-width: thin;
+  scrollbar-color: #a7a8f8 #6062bb;
 }
 .nav {
-  background-color: #3B3B7A;
+  background: #3B3B7A;
   color: #fff;
   padding: 1.63vh 1.58vw;
-  width: 100vw;
+  width: 100%;
   height: 10vh;
   text-align: center;
 }
@@ -40,7 +48,222 @@ body {
   justify-content: center;
   align-items: center;
   height: 50vh;
-  width: 100vw;
+  width:  100%;
   background-color: #241F44;
+  background-image: url(/bg_Hero.png);
+  background-size: cover;
+  background-position: 50%;
   color: #fff;
+}
+.header-split {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width:  100%;
+  gap: 2.5vw;
+}
+.header-split .left {
+  width: 63.7753vh;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.header-split .left span.higher {
+  font-size: 4.25766vh;
+  font-weight: 700;
+  color: #d5daee;
+  font-family: "vinila-extended", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-family: "vinila-extended", sans-serif;
+}
+.header-split .left span.lower {
+  font-size: 1em;
+  font-weight: 400;
+  font-size: 1.66886vh;
+  color: #9d9ecf;
+}
+.header-split .right {
+  width: 39.8754vh;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header-split .right img {
+  height: 80%;
+  width: auto;
+}
+@media only screen and (max-width: 750px) {
+  .header-split .right {
+    display: none;
+  }
+  .header-split .left {
+    width: 90%;
+  }
+}
+.offerings {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 8vh;
+  padding: 5vh 0;
+}
+.offerings h1 {
+  font-size: 3.5vh;
+  font-weight: 700;
+  color: #241F44;
+}
+.cards {
+  width: 54%;
+  padding: 5vh 3vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1vh;
+  gap: 5vh;
+  flex-shrink: 0;
+  /* height: 22vh; */
+  border-bottom: 0.3vh solid #3A3B7B;
+  box-sizing: content-box;
+}
+.card {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 4px;
+  text-align: center;
+  max-width: 50%;
+  height: 100%;
+}
+.card img {
+  width: 7vh;
+}
+.card b {
+  font-size: 3vh;
+}
+.card p {
+  width: 100%;
+  margin: 0;
+  font-size: 1.66886vh;
+}
+@media only screen and (max-width: 750px) {
+  .cards {
+    width: 90%;
+    flex-direction: column;
+    gap: 4vh;
+  }
+  .offerings {
+    margin-top: 4vh;
+  }
+}
+.section-three {
+  width: 60%;
+  gap: 2vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+.section-three h1 {
+  font-size: 3.5vh;
+  font-weight: 700;
+  color: #3a3b7b;
+}
+.section-three p {
+  color: #717171;
+  font-size: 1.66886vh;
+}
+.section-three img {
+  width: 50vh;
+}
+button.green-info {
+  background-color: #4CAF4F;
+  color: #fff;
+  padding: 1.5vh 3vh;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.66886vh;
+  cursor: pointer;
+}
+.clients {
+  margin: 10vh auto;
+  width: 50%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 1vh;
+}
+.footer {
+  height: 40vh;
+  background: #3a3b7b;
+  margin-top: 4vh;
+  display: flex;
+  align-items: center;
+  padding-left: 40vh;
+  gap: 10vh;
+  color: white;
+}
+
+.footer-left {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1vh;
+}
+.footer-left img {
+  width: 25vh;
+}
+.footer-left .info {
+  display: flex;
+  gap: 1vh;
+  flex-direction: column;
+}
+.footer-left .socials {
+  flex-direction: row;
+  gap: 0.5vh;
+  display: flex;
+  align-items: center;
+}
+.footer-left .socials i {
+  color: white;
+  font-size: 1.8vh;
+}
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1vh;
+}
+
+@media only screen and (max-width: 750px) {
+  .section-three .left {
+    display: none;
+  }
+  .section-three {
+    width: 80%;
+  }
+  .footer {
+    padding-left: 0;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: unset;
+    gap: 4vh;
+    padding-bottom: 2vh;
+  }
+  .footer-left {
+    align-items: center;
+  }
+  .socials {
+    margin: 0 auto;
+  }
 }
