@@ -13,7 +13,7 @@ export default function Home() {
                         <span className="lower">At <b>FreeForce</b>, we believe true business transformation involves more than incremental changes. It's about deep, systemic shifts that lead to nonlinear growth. We partner with companies ready to embrace innovative ways of operating.</span>
                     </div>
                     <div className="right">
-                        <Image src="/Illustration.png" alt="header" width={500} height={500} />
+                        <img src="/Illustration.png" alt="header" width={500} height={500} />
                     </div>
                 </div>
             </header>
