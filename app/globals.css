@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
 @import url("https://site-assets.fontawesome.com/releases/v6.6.0/css/all.css");
 @import url("https://use.typekit.net/ioh8tqw.css");
 * {
@@ -11,6 +12,8 @@ html, body {
   font-family: var(--font-inter);
   margin: 0;
   padding: 0;
+  width: 100vw;
+  height: 100vh;
   vertical-align: baseline;
   scrollbar-width: thin;
   scrollbar-color: #a7a8f8 #6062bb;
@@ -112,7 +115,7 @@ h1, h2, h3, h4, h5, h6 {
   height: 80%;
   width: auto;
 }
-@media only screen and (max-width: 920px) {
+@media only screen and (max-width: 1030px) {
   .header-split .right {
     display: none;
   }
@@ -170,7 +173,7 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
   font-size: 1.66886vh;
 }
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 920px) {
   .cards {
     width: 90%;
     flex-direction: column;
@@ -277,7 +280,8 @@ button.green-info {
   margin-top: 4vh;
   display: flex;
   align-items: center;
-  padding-left: 40vh;
+  padding-left: 20vh;
+  font-size: 1.66886vh;
   gap: 10vh;
   color: white;
 }
@@ -302,6 +306,11 @@ button.green-info {
   display: flex;
   align-items: center;
 }
+.footer-left .socials a {
+  text-decoration: none;
+  width: 2.75vh !important;
+  height: 2.75vh !important;
+}
 .footer-left .socials i {
   color: white;
   font-size: 1.8vh;
@@ -313,7 +322,19 @@ button.green-info {
   gap: 1vh;
 }
 
-@media only screen and (max-width: 750px) {
+.desktop-flex {
+  display: flex;
+}
+.mobile-flex {
+  display: none;
+}
+@media only screen and (max-width: 920px) {
+  .desktop-flex {
+    display: none;
+  }
+  .mobile-flex {
+    display: flex;
+  }
   .section-three .left {
     display: none;
   }
@@ -359,6 +380,22 @@ button.green-info {
   flex-direction: row-reverse !important;
   justify-content: flex-end !important;
   border-radius: 4px;
+  font-size: 1.8vh !important;
+  padding: 1.9vw 0 !important;
+}
+.labeled-accordion-summary h2 {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.labeled-accordion-summary h2 span {
+  font-size: 1.45vh;
+  font-weight: 600;
+  color: #444;
+}
+.labeled-accordion-summary h2 span b {
+  font-weight: 700;
+  color: #000;
 }
 
 .split-course {
@@ -378,4 +415,62 @@ button.green-info {
 }
 .split-course span b {
   color: #252B42;
+}
+
+.page-content {
+  padding: 8vh 5vw;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.66886vh;
+  width: 100%;
+  gap: 2vw;
+}
+.page-content h1 {
+  width: 100%;
+  text-align: center;
+  font-size: 2.8vh;
+  font-weight: 700;
+  color: #3a3b7b;
+  font-family: "Archivo Black", sans-serif;
+  margin: 1.3vh;
+}
+.simple-5050 {
+  display: flex;
+  gap: var(--gap, 2vh);
+}
+.simple-5050 .left, .simple-5050 .right {
+  width: calc(50% - 1vh);
+}
+
+.dual-center {
+  justify-content: center;
+  align-items: center;
+}
+
+.MuiInput-root, .MuiTextarea-root {
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1) !important;
+  font-size: 1.25vh !important;
+  border-width: 1px !important;
+  border-color: #D2D5DA !important;
+}
+.MuiInput-root::after, .MuiTextarea-root::after {
+  position: absolute;
+  top: -10px;
+  background: linear-gradient(to bottom, #fff, #fbfcfe);
+  padding: 0 4px;
+  z-index: 99;
+  left: 10px;
+  content: var(--text, "Goopsludge");
+  font-weight: 600;
+  font-size: 1.1vh !important;
+}
+
+@media only screen and (max-width: 920px) {
+  .page-content {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .header .higher {
+    font-size: 2.8vh !important;
+  }
 }

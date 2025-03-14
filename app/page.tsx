@@ -4,7 +4,7 @@ import Footer from './components/Footer';
 
 export default function Home() {
     return (
-        <div>
+        <>
             <Navbar />
             <header className="header">
                 <div className="header-split">
@@ -55,6 +55,6 @@ export default function Home() {
                 <p>We have been working with some Fortune 500+ clients</p>
             </div> */}
             <Footer />
-        </div>
+        </>
     );
 }
