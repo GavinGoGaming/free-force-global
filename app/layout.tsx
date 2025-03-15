@@ -8,8 +8,9 @@ const geistSans = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Free Force Global",
-  description: "E",
+  title: "FreeForce Global",
+  description: "A development and transformation company.",
+  themeColor: '#00f'
 };
 
 export default function RootLayout({

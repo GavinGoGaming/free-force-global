@@ -67,7 +67,7 @@ html, body {
   font-style: normal;
   display: flex;
   align-items: flex-start;
-  padding: 0 30vh;
+  padding: 0 10vh;
   gap: 1.5vh;
   flex-direction: column;
 }

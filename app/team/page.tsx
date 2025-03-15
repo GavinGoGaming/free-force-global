@@ -1,7 +1,7 @@
 "use client";
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import { CSSProperties, useState } from 'react';
+import { CSSProperties, ReactNode, useState } from 'react';
 import { Button, Input, Textarea } from '@mui/joy';
 import UserIcon from './userIcon';
 import members, { Member } from './members';
@@ -10,7 +10,7 @@ import "./team.css";
 
 const lorem = "Lorem ipsum dolor sit, amet consectetur adipisicing elit.";
 
-function UserItem({name, title, description}: {name: string, title: string, description: string}) {
+function UserItem({name, title, description, short}: {name: string, title: string, short: string, description: ReactNode|string}) {
     const [open, setOpen] = useState(false);
     return (
         <div className={`user-item ${open ? 'open' : ''}`} onClick={() => setOpen(!open)}>
@@ -24,10 +24,10 @@ function UserItem({name, title, description}: {name: string, title: string, desc
                     </div>
                     <div className="right-nametitle">
                         <span className='name'>{name}</span>
-                        <span className='title'>{title || lorem}</span>
+                        <span className='title'>{title}</span>
                     </div>
                 </div>
-                <p className='description'>{open ? <>{description || (lorem+lorem+lorem+lorem+lorem)}</> : <>{description.split('.')[0] || (lorem+lorem)}</>}
+                <p className='description'>{open ? <>{description}</> : <>{short}</>}
                 <b> Read {open ? 'less' : 'more'}.</b></p>
             </div>
         </div>
@@ -50,7 +50,7 @@ export default function Home() {
                 <div className='page-content dual-center fill-on-mobile' style={{gap:'1.8vh', width: '90vw', margin: 'auto'}}>
                     <h1>Our Team</h1>
                     {members.map((member: Member, index: number) => (
-                        <UserItem key={index} name={member.name} title={member.title} description={member.description} />
+                        <UserItem key={index} short={member.short} name={member.name} title={member.title} description={member.description} />
                     ))}
                 </div>
             <Footer />
