@@ -1,0 +1,60 @@
+.user-item {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 1rem;
+    padding: 1.9vh 0;
+    border-radius: 4px;
+    flex-shrink: 0;
+    width: 100%;
+}
+.user-item:hover {
+    cursor: pointer;
+    background: #d7beff40;
+}
+.ui-left {
+    display: inline-flex;
+    width: 9vh;
+    height: 9vh;
+}
+.ui-right {
+    display: inline-flex;
+    text-align: left;
+    flex-direction: column;
+    font-family: Montserrat, Inter, 'Poppins', sans-serif;
+    width: 100%;
+}
+
+.name-title {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    gap: 8px;
+    font-size: 2vh;
+    padding-bottom: 2.8vh;
+}
+.right-nametitle {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-weight: 300;
+}
+.name {
+    font-weight: 700;
+    color: #444;
+}
+.left-nametitle, .ui-left {
+    margin-left: 2%;
+}
+.title {
+    font-size: 1.75vh;
+}
+
+@media only screen and (max-width: 920px) {
+    .ui-left {
+        display: none;
+    }
+    .description {
+        padding: 0 2.5%;
+    }
+}

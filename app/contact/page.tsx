@@ -12,7 +12,7 @@ export default function Home() {
                     <span className="higher">Contact Us</span>
                     <span className="lower">*Unless otherwise noted, all classes maximize interaction via role-plays, fishbowls, breakouts, and other individual and team exercises. All have options for sustainment as well as individual coaching</span>
                 </header>
-                <div className='page-content dual-center' style={{gap:'1.8vh', width: '60vh', margin: 'auto'}}>
+                <div className='page-content dual-center' style={{gap:'1.8vh', width: '60vw', margin: 'auto'}}>
                     <div className="simple-5050" style={{width: "calc(90% + 2vh)",'--gap': '1vh'} as CSSProperties}>
                         <div className="left">
                             <Input placeholder="Name" sx={{'--text': '"First name"'}} autoComplete='name' />

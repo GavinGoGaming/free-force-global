@@ -328,12 +328,18 @@ button.green-info {
 .mobile-flex {
   display: none;
 }
+.mobile-ilflex {
+  display: none;
+}
 @media only screen and (max-width: 920px) {
   .desktop-flex {
     display: none;
   }
   .mobile-flex {
     display: flex;
+  }
+  .mobile-ilflex {
+    display: inline-flex;
   }
   .section-three .left {
     display: none;
@@ -472,5 +478,8 @@ button.green-info {
   }
   .header .higher {
     font-size: 2.8vh !important;
+  }
+  .fill-on-mobile {
+    width: 90vw;
   }
 }
