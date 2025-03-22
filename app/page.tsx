@@ -5,7 +5,7 @@ import Footer from './components/Footer';
 export default function Home() {
     return (
         <>
-            <Navbar />
+            <Navbar activePage='home' />
             <header className="header">
                 <div className="header-split">
                     <div className="left">

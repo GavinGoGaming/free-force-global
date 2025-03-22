@@ -67,16 +67,14 @@ function NestedCourses({ children }: { children: ReactNode }) {
 }
 
 export default function CourseSections() {
-    const [catMode, setCatMode] = useState(false);
-    var arrow = catMode ? "https://media1.tenor.com/m/V1F0K5Rh5rcAAAAd/huh.gif" : "/arrow-down.svg";
-    var arrowHeight = catMode ? 30 : 10;
+    var arrow = "/arrow-down.svg";
+    var arrowHeight = 10;
 
     const [pspdOpen, setPspdOpen] = useState(false);
     const [ssPPPOpen, setSsPPPOpen] = useState(false);
 
     return (
         <>
-            {/* <Button onClick={() => setCatMode(!catMode)}>cat mode</Button> */}
             <AccordionGroup transition="0.2s ease" sx={{ width: '70%' }}>
                 <Accordion>
                     <AccordionSummary indicator={<img src={arrow} height={arrowHeight} />}>

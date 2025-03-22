@@ -1,3 +1,6 @@
+"use client";
+import { useRouter } from "next/navigation";
+
 function SocialButton({icon, link}: {icon: string, link: string}) {
     return (
         <a href={link} target="_blank" style={{height: '30px', width: '30px', display: 'flex', justifyContent: 'center', alignItems: 'center', borderRadius: '50%', backgroundColor: '#ffffff25'}}>
@@ -7,6 +10,12 @@ function SocialButton({icon, link}: {icon: string, link: string}) {
 }
 
 export default function Footer() {
+    const router = useRouter();
+    function go(path: string) {
+        return (e: any) => {
+            router.push(path);
+        }
+    }
     return (
         <footer className="footer">
             <div className="footer-left">
@@ -22,10 +31,10 @@ export default function Footer() {
             </div>
             <div className="footer-right">
                 <b>Company</b>
-                <span>About us</span>
-                <span>Blog</span>
-                <span>Contact us</span>
-                <span>Services</span>
+                <span onClick={go('/about')}>About us</span>
+                <span onClick={go('/team')}>Team</span>
+                <span onClick={go('/contact')}>Contact us</span>
+                <span onClick={go('/courses')}>Courses</span>
             </div>
         </footer>
     );

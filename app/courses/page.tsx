@@ -6,7 +6,7 @@ import CourseSections from './courses';
 export default function Home() {
     return (
         <>
-            <Navbar />
+            <Navbar activePage='courses' />
             <header className="header small-header">
                 <span className="higher">FreeForce Global Course Offerings</span>
                 <span className="lower">*Unless otherwise noted, all classes maximize interaction via role-plays, fishbowls, breakouts, and other individual and team exercises. All have options for sustainment as well as individual coaching</span>

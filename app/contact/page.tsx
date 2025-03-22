@@ -7,7 +7,7 @@ import { Button, Input, Textarea } from '@mui/joy';
 export default function Home() {
     return (
         <>
-            <Navbar />
+            <Navbar activePage='contact' />
                 <header className="header small-header">
                     <span className="higher">Contact Us</span>
                     <span className="lower">*Unless otherwise noted, all classes maximize interaction via role-plays, fishbowls, breakouts, and other individual and team exercises. All have options for sustainment as well as individual coaching</span>

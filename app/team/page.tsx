@@ -38,16 +38,16 @@ export default function Home() {
     return (
         <>
         
-            <Navbar />
+            <Navbar activePage='team' />
                 <header className="header small-header">
                     <span className="higher">FreeForce Global a development and transformation company.</span>
                     <span className="lower">*Unless otherwise noted, all classes maximize interaction via role-plays, fishbowls, breakouts, and other individual and team exercises. All have options for sustainment as well as individual coaching</span>
                 </header>
-                <div className="page-content" style={{width:'100vw',paddingLeft:'5vw',paddingRight:'5vw', margin: 'auto',background:'#dde1f1'}}>
+                <div className="page-content" style={{width:'100vw',padding:'8vh 40vh', margin: 'auto',background:'#dde1f1'}}>
                     <b>Mission Statement</b>
                     <span>Guided by integrity, expertise, and a commitment to excellence, we strive to be the catalyst for positive change in every person and organization we serve.</span>
                 </div>
-                <div className='page-content dual-center fill-on-mobile' style={{gap:'1.8vh', width: '90vw', margin: 'auto'}}>
+                <div className='page-content dual-center fill-on-mobile' style={{gap:'1.8vh', width: '75vw', margin: 'auto'}}>
                     <h1>Our Team</h1>
                     {members.map((member: Member, index: number) => (
                         <UserItem key={index} short={member.short} name={member.name} title={member.title} description={member.description} />

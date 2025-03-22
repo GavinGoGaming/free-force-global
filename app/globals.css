@@ -16,6 +16,7 @@ html, body {
   height: 100vh;
   vertical-align: baseline;
   scrollbar-width: thin;
+  overflow-x: hidden;
   scrollbar-color: #a7a8f8 #6062bb;
 }
 .nav {
@@ -25,20 +26,43 @@ html, body {
   width: 100%;
   height: 10vh;
   text-align: center;
+  /* justify-content: center; */
+  align-items: center;
+  display: flex;
 }
 .nav .logo {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-left: 1.58vw;
+  padding-left: 1.50vh;
   box-sizing: border-box;
   height: 100%;
   width: 50%;
   position: relative;
 }
+.nav-items {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 30px;
+}
+.nav-item {
+  font-family: Inter;
+  font-weight: 600;
+  font-size: 1.66886vh;
+  cursor: pointer;
+  border-radius: 4px;
+  padding: 1vh 1.5vh;
+}
+.nav-item.active {
+  color: #5cd560;
+}
+.nav-item:hover {
+  background: #4d4da0;
+}
 .symbol {
   position: absolute;
-  margin-right: 14.23vw;
+  margin-right: 15vw;
   margin-top: 4.90vh;
   height: 12.35vh;
 }
@@ -67,7 +91,7 @@ html, body {
   font-style: normal;
   display: flex;
   align-items: flex-start;
-  padding: 0 10vh;
+  padding: 0 40vh;
   gap: 1.5vh;
   flex-direction: column;
 }
@@ -115,7 +139,7 @@ h1, h2, h3, h4, h5, h6 {
   height: 80%;
   width: auto;
 }
-@media only screen and (max-width: 1030px) {
+@media only screen and (max-width: 920px) {
   .header-split .right {
     display: none;
   }
@@ -280,7 +304,7 @@ button.green-info {
   margin-top: 4vh;
   display: flex;
   align-items: center;
-  padding-left: 20vh;
+  padding-left: 40vh;
   font-size: 1.66886vh;
   gap: 10vh;
   color: white;
@@ -424,7 +448,7 @@ button.green-info {
 }
 
 .page-content {
-  padding: 8vh 5vw;
+  padding: 8vh 40vh;
   display: flex;
   flex-direction: column;
   font-size: 1.66886vh;
@@ -482,4 +506,20 @@ button.green-info {
   .fill-on-mobile {
     width: 90vw;
   }
+  .nav-items {
+    display: none;
+  }
+  .nav {
+    justify-content: flex-start;
+    padding-left: 10vw;
+  }
+  .nav .symbol {
+    margin-right: 30vw;
+  }
+}
+.footer-right span {
+  cursor: pointer;
+}
+.footer-right span:hover {
+  text-decoration: underline;
 }
