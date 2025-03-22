@@ -497,7 +497,7 @@ button.green-info {
 
 @media only screen and (max-width: 920px) {
   .page-content {
-    padding-left: 0;
+    padding-left: 2vh;
     padding-right: 0;
   }
   .header .higher {
@@ -522,4 +522,50 @@ button.green-info {
 }
 .footer-right span:hover {
   text-decoration: underline;
+}
+
+.overlay-mobile-menu {
+  width: 100%;
+  height: 100%;
+  z-index: 90;
+  position: fixed;
+  top: 0;
+  left: 0;
+  backdrop-filter: blur(5px);
+}
+
+.mobile-menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60%;
+  height: 100vh;
+  background: #4d4da0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  color: white;
+  font-size: 24px;
+  font-weight: 500;
+}
+.menu-btn {
+  z-index: 1000;
+}
+.mobile-menu .nav-item {
+  width: 90%;
+  margin: 0.2vh 0;
+  height: 5vh;
+  text-align: right;
+  gap: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2vh;
+  flex-direction: row;
+}
+.mobile-menu .nav-item:hover {
+  color: #5cd560;
+  background: rgba(0, 0, 0, 0.1);
 }
